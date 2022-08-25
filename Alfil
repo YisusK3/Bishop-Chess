@@ -1,0 +1,80 @@
+#Clases
+class Pieza:   #Se crea la clase Pieza
+
+    def __init__(self, color, posicionX, posicionY ):
+        self.color=color;
+        self.posicionX=posicionX;
+        self.posicionY=posicionY;
+  #  print("Se creo una pieza de color: ", color,"En la posicion: ",posicionX)
+class Alfil (Pieza):
+
+    def __init__(self,color, posicionX, posicionY, tipo):
+        Pieza.__init__(self, color, posicionX, posicionY);
+        self.color=color;
+Alfil2=Alfil("Negro","2","2","Alfil");
+           
+#Metodos
+ny=0;
+nx=0;
+def AvanzarIzquierda(self):
+    IngresaX=int(input("Ingrese cuantos casilleros desea moverse en el eje X: "))
+    IngresaY=int(input("Ingrese cuantos casilleros desea moverse en el eje Y: "))
+    self.posicionX=self.posicionX+nx;
+    self.posicionY=self.posicionY+ny;
+
+def AvanzarDerecha(self):
+    IngresaX=int(input("Ingrese cuantos casilleros desea moverse en el eje X: "))
+    IngresaY=int(input("Ingrese cuantos casilleros desea moverse en el eje Y: "))
+    self.posicionX=self.posicionX-nx;
+    self.posicionY=self.posicionY+ny;            
+
+def RetrocederIzquierda(self):
+    IngresaX=int(input("Ingrese cuantos casilleros desea moverse en el eje X: "))
+    IngresaY=int(input("Ingrese cuantos casilleros desea moverse en el eje Y: "))
+    self.posicionX=self.posicionX+nx;
+    self.posicionY=self.posicionY-ny;
+
+def RetrocederDerecha(self):
+    IngresaX=int(input("Ingrese cuantos casilleros desea moverse en el eje X: "))
+    IngresaY=int(input("Ingrese cuantos casilleros desea moverse en el eje Y: "))
+    self.posicionX=self.posicionX-nx;
+    self.posicionY=self.posicionY-ny;
+
+#def MovimientoInvalido(self):
+#    while self.posicionX<1 or self.posicionX>8 and self.posicionY<1 or self.posicionY>8:
+#        IngresaX=int(input("Ingrese cuantos casilleros desea moverse en el eje X: "))
+#       IngresaY=int(input("Ingrese cuantos casilleros desea moverse en el eje Y: "))
+
+
+print("El tablero se lee en forma de matriz");
+
+InicialX=int(input("Ingrese la posicion del Alfil en X: "));      #Establecemos la posicion inicial en X del Alfil
+while InicialX<1 or InicialX>8:
+    InicialX=int(input("Posicion no valida,ingrese otro numero: "));
+    Alfil1=Alfil("Blanco ",InicialX, "0", "Alfil")
+
+InicialY=int(input("Ingrese la posicion del Alfil en Y: "));      #Establecemos la posicion inicial en Y del Alfil
+while InicialY<1 or InicialY>8:
+    InicialY=int(input("Posicion no valida,ingrese otro numero: "));
+    Alfil1=Alfil("Blanco ", InicialX, InicialY, "Alfil");
+
+#Se le pregunta al usuario que accion desea realizar
+opcion=int(input("\n\nQue movimiento desea realizar? :\n 1)Avanzar hacia la izquierda.\n 2)Avanzar hacia la derecha.\n 3)Retroceder hacia la izquierda.\n 4)Retroceder hacia la derecha.\n"));
+
+
+
+
+#Segun la opcion que elija el usuario se llama al metodo correspondiente
+while opcion<1 or opcion>4:
+    opcion=int(input("Opcion incorrecta,prube nuevamente "));
+    if opcion==1:
+        Alfil1=AvanzarIzquierda();
+        print(" ",posicionX,posicionY, "")
+    elif opcion==2:
+        AvanzarDerecha;
+    elif opcion==3:    
+        RetrocederIzquierda;
+    elif opcion==4:
+        RetrocederDerecha;
+
+ 
